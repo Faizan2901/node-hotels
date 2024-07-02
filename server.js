@@ -14,6 +14,20 @@ const menuItemsRoutes = require('./routes/menuItemsRoutes')
 app.use('/person', personRoutes)
 app.use('/menu', menuItemsRoutes)
 
+app.get('/', (req, res) => {
+    res.send(`
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>My Node.js App</title>
+        </head>
+        <body>
+            <h1>Hello, World!</h1>
+        </body>
+        </html>
+    `);
+});
+
 app.listen(PORT, () => {
     console.log("Server is running on port number 3000")
 })
